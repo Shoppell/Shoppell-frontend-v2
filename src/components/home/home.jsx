@@ -2,35 +2,62 @@ import React from "react";
 
 const Home = () => {
         return (
-            <div style={{fontFamily: "BYekan"}}>
-
+            <div style={{fontFamily: "Vazir"}}>
             <title>Home</title>
-
             <meta name="generator" content="Nicepage 4.11.3, nicepage.com" />
-
-            <section className="u-clearfix u-white u-section-1" id="carousel_1776">
-                <div className="u-clearfix u-sheet u-sheet-1">
-                    <div className="u-expanded-width-xs u-shape u-shape-svg u-text-palette-2-base u-shape-1">
-                        <svg className="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 150" style={{}}><use xmlnsXlink="http://www.w3.org/1999/xlink" xlinkHref="#svg-58d1" /></svg>
-                        <svg className="u-svg-content" viewBox="0 0 160 150" x="0px" y="0px" id="svg-58d1"><path d="M43.2,126.9c14.2,1.3,27.6,7,39.1,15.6c8.3,6.1,19.4,10.3,32.7,5.3c11.7-4.4,18.6-17.4,21-30.2c2.6-13.3,8.1-25.9,15.7-37.1
-	c8.3-12.1,10.8-27.9,5.3-42.7C150.5,20.3,134.6,9,117,7.6C107.9,6.9,98.8,5,90.1,1.9C83-0.6,75-0.7,67.4,2.1
-	c-9.9,3.7-17,11.6-20.1,21c-3.3,10.1-10.9,18-20.6,22.2c-0.1,0-0.1,0.1-0.2,0.1c-20.3,8.9-31,32-24.6,53.2
-	C6.9,115.6,25.2,125.2,43.2,126.9z" /></svg>
-                    </div>
-                    <img className="u-image u-image-contain u-image-default u-image-1" src="images/0101.png" alt="" data-image-width={571} data-image-height={368} />
-                    <div className="u-container-style u-expanded-width-xs u-group u-shape-rectangle u-group-1">
+            <section className="container" id="carousel_1776">
+                    <img className="" style={{float:"left"}} src="images/header1.gif" alt="" data-image-width={571} data-image-height={368} />
+                    <div className="" style={{float:"right",marginTop:"10%"}}>
                         <div className="u-container-layout u-valign-top u-container-layout-1">
-                            <h2 className="u-text u-text-default u-text-1">
-                                <span style={{fontSize: '96px', fontFamily: ""}}>شاپل</span>
-                            </h2>
-                            <h3 className="u-custom-font u-font-raleway u-text u-text-default u-text-2">فروشگاه خودتو همین الان بساز</h3>
+                            <h3 className="u-text u-text-default u-text-1">
+                                <span style={{fontSize: '96px', fontFamily: "Yekan"}}>شاپل</span>
+                            </h3>
+                            <hr style={{width:500}}></hr>
+                            <h3 >فروشگاه خودتو همین الان بساز</h3>
                             <p className="u-align-right u-text u-text-3">&nbsp;شما در هر لحظه فروشگاه خودت رو بسازی.بدون نیاز به هزینه ای</p>
-                            <a href="https://nicepage.one" className="u-active-grey-80 u-border-none u-btn u-btn-round u-button-style u-hover-grey-80 u-palette-2-base u-radius-2 u-text-active-white u-text-hover-white u-btn-1">توضیحات بیشتر<br />
-                            </a>
-                        </div>
+                            <button type="button" class="btn" style={{color:"#407BFF"}}>ساخت فروشگاه <sapn></sapn><i class="fa fa-cog fa-1x"></i>
+                        </button>
                     </div>
                 </div>
             </section>
+
+
+      <div>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+        <section className="hero-section">
+          <div className="card-grid" style={{backgroundColor:"white"}}>
+            <a className="card" href="#" style={{margin:"0px", marginRight:"1%"}}>
+              <div className="card__background" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)', borderRadius:"10px"}} />
+              <div className="card__content">
+                <p className="card__category">Category</p>
+                <h3 className="card__heading">Example Card Heading</h3>
+              </div>
+            </a>
+            <a className="card" href="#" style={{margin:"0px", marginRight:"1%"}}>
+              <div className="card__background" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)', borderRadius:"10px"}} />
+              <div className="card__content">
+                <p className="card__category">Category</p>
+                <h3 className="card__heading">Example Card Heading</h3>
+              </div>
+            </a>
+            <a className="card" href="#" style={{margin:"0px", marginRight:"1%"}}>
+              <div className="card__background" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)', borderRadius:"10px"}} />
+              <div className="card__content">
+                <p className="card__category">Category</p>
+                <h3 className="card__heading">Example Card Heading</h3>
+              </div>
+            </a><a className="card" href="#" style={{marginTop:"0px",marginRight:"1%"}}>
+              <div className="card__background" style={{backgroundImage: 'url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)', borderRadius:"10px"}} />
+              <div className="card__content">
+                <p className="card__category">Category</p>
+                <h3 className="card__heading">Example Card Heading</h3>
+              </div>
+            </a>
+            <div>
+            </div></div></section>
+      </div>
+
+            
             <section className="u-clearfix u-section-2" id="carousel_6f09">
                 <div className="u-clearfix u-sheet u-valign-middle u-sheet-1">
                     <div className="u-clearfix u-expanded-width u-gradient u-layout-wrap u-layout-wrap-1">

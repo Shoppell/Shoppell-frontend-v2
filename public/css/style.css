@@ -7,6 +7,24 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Vazir";
+    src: url("../fonts/Vazir.eot") format("eot"),
+        url("../fonts/Vazir.woff") format("woff"),
+        url("../fonts/Vazir.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Yekan";
+    src: url("../fonts/Yekan.eot") format("eot"),
+        url("../fonts/Yekan.woff") format("woff"),
+        url("../fonts/Yekan.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     overflow-x: hidden;
 }
@@ -82,7 +100,7 @@ form button {
 
 .landing-layer {
     width: 100%;
-    background-color: cadetblue ;
+    background-color: #75aeeb;
     position: relative;
 }
 .landing-layer nav {

@@ -15,7 +15,7 @@ const TopNav = () => {
                             <NavLink
                                 to="/"
                                 exact
-                                activeStyle={{ color: "lime" }}
+                                activeStyle={{ color: "white" }}
                             >
                                 {" "}
                                 صفحه اصلی{" "}
