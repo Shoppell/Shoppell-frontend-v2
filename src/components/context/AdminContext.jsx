@@ -61,7 +61,7 @@ const AdminContext = ({ courses, children }) => {
     const closeDeleteCourseDialog = () => setDeleteCourseDialog(false);
 
     const filteredCourses = courseList.filter((course) =>
-        course.title.includes(search)
+        course.name.includes(search)
     );
 
     const courseData = paginate(filteredCourses, currentPage, perPage);

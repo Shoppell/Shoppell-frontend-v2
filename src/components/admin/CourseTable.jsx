@@ -1,9 +1,15 @@
-import React, { useContext } from "react";
+import React, {useContext, useEffect} from "react";
 import Pagination from "./../common/Pagination";
 import { dashContext } from "./../context/dashContext";
+import { getAllCourses } from "./../../actions/courses";
+import {store} from "../../store";
 
 const CourseTable = () => {
     const context = useContext(dashContext);
+
+    useEffect(() => {
+        store.dispatch(getAllCourses())
+    }, []);
 
     const {
         currentPage,
@@ -18,9 +24,13 @@ const CourseTable = () => {
         sortCoursesAsc,
         sortCoursesDes,
     } = context;
+
+
+
+
     return (
         <section style={{ marginTop: "7em", marginRight: "2em" }}>
-            <div>
+            <div >
                 <div>
                     <h3 className="alert alert-info text-center">
                         لیست دوره ها
@@ -77,11 +87,11 @@ const CourseTable = () => {
                         </thead>
                         <tbody>
                             {courseData.map((course) => (
-                                <tr key={course._id}>
+                                <tr key={course.id}>
                                     <td>{course.name}</td>
                                     <td>
                                         <a
-                                            href={`https://toplearnapi.ghorbany.dev/${course.imageUrl}`}
+                                            href={`${course.image1}`}
                                             target="_blank"
                                             className="btn btn-info btn-sm"
                                         >
@@ -94,9 +104,11 @@ const CourseTable = () => {
                                             : `${course.price}`}
                                     </td>
                                     <td>
-                                        {course.price}
+                                        {course.last_price}
                                     </td>
-
+                                    <td>
+                                        {course.category.name}
+                                    </td>
                                     <td>
                                         <button
                                             className="btn btn-warning"

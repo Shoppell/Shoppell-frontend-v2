@@ -23,14 +23,14 @@ import ProductS from "../components/shops/products";
 import About_us from "../components/about/about_us";
 import productD from "../components/shops/productD";
 import Home from "../components/home/home";
+import {store} from "../store";
+import {getAllCourses} from "../actions/courses";
 
 const Toplearn = () => {
     const courses = useSelector((state) => state.courses);
     const user = useSelector((state) => state.user);
     const dispatch = useDispatch();
     const token = localStorage.getItem("token");
-    const phone = localStorage.getItem("user_phone");
-
     const indexCourses = paginate(courses, 1, 8);
 
     useEffect(() => {

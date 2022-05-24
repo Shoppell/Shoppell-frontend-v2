@@ -2,7 +2,10 @@ import http from "./httpService";
 import config from "./config.json";
 
 export const getCourses = () => {
-    return http.get(`http://127.0.0.1:5000/api/v1/shop/shop/list`).then(res => res.data.data);
+    const token = localStorage.getItem("token");
+    return http.get(`${config.localapi}/api/v1/shop/shop/productlist`,{
+                    headers: { 'content-type': 'multipart/form-data',
+                        "Authorization" : `Bearer ${token}`}});
 };
 
 export const getCourse = (courseId) => {
