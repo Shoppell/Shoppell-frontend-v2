@@ -2,7 +2,7 @@ import React from "react";
 
 const Dashboard = ({ courses }) => {
     return (
-        <div className="container-fluid" style={{ marginTop: "7em" }}>
+        <div className="container-fluid" style={{ marginTop: "7em", }}>
             <div className="row">
                 <div className="col-lg-3 col-md-6">
                     <div className="panel panel-primary">
@@ -22,7 +22,7 @@ const Dashboard = ({ courses }) => {
             </div>
             <div className="row">
                 <div className="alert-info alert text-center">
-                    به داشبورد بسیار ساده خوش آمدید
+                    به داشبورد شاپل خوش آمدید
                 </div>
             </div>
         </div>

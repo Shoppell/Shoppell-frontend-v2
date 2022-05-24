@@ -25,6 +25,15 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Nahid";
+    src: url("../fonts/Nahid.eot") format("eot"),
+        url("../fonts/Nahid.woff") format("woff"),
+        url("../fonts/Nahid.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     overflow-x: hidden;
 }
@@ -261,7 +270,7 @@ form button {
 
 footer .top-footer {
     width: 100%;
-    background-color: #26292c;
+    background-color: #75aeeb;
     padding: 40px 0 20px;
 }
 .top-footer .list {
@@ -279,7 +288,7 @@ footer .top-footer {
     right: 0;
     top: 0;
     margin-bottom: 15px;
-    border-bottom: 1px solid #404e51;
+    border-bottom: 1px solid #ffffff;
     z-index: 10;
 }
 .top-footer .list header h4 {
@@ -287,7 +296,7 @@ footer .top-footer {
     font-size: 16px;
     line-height: 20px;
     display: inline-block;
-    background-color: #26292c;
+    background-color: #75aeeb;
     z-index: 11;
     position: relative;
     padding-left: 20px;
@@ -302,11 +311,11 @@ footer .top-footer {
 }
 .top-footer .list ul li a:hover {
     padding-right: 17px;
-    color: #37d43b;
+    color: #2c4dc3;
 }
 .top-footer .list ul li a:before {
     position: absolute;
-    color: #37d43b;
+    color: #2c4dc3;
     font-size: 6px;
     font-family: "FontAwesome";
     content: "\f111";
@@ -314,11 +323,11 @@ footer .top-footer {
     top: 3px;
 }
 .bottom-footer {
-    background-color: #1e2023;
+    background-color: #396EB0;
     padding: 15px 0;
 }
 .bottom-footer p {
-    color: #b2bfc5;
+    color: #ffffff;
     font-size: 14px;
     line-height: 22px;
     text-align: justify;
@@ -329,7 +338,7 @@ footer .top-footer {
     color: #b2bfc5;
 }
 .bottom-footer p a:hover {
-    color: #09e3b1;
+    color: #75aeeb;
 }
 
 .client-page {
@@ -422,7 +431,7 @@ main#home-page {
     color: #4b4f4f;
 }
 .terms-items header a:hover {
-    color: #2aaf27;
+    color: #75aeeb;
 }
 .terms-items .term-col article {
     width: 100%;
@@ -449,10 +458,10 @@ main#home-page {
     white-space: nowrap;
 }
 .terms-items .term-col article h2 a:hover {
-    color: #2aaf27;
+    color: #75aeeb;
 }
 .terms-items .term-col article span {
-    color: #2aaf27;
+    color: #75aeeb;
     padding: 10px;
     border-top: 1px solid #ebebeb;
     width: 100%;
@@ -564,7 +573,7 @@ main#home-page {
     color: #222;
 }
 .user-account aside > section .inner ul li a:hover {
-    color: #2aaf27;
+    color: #75aeeb;
 }
 .user-account .user-account-content {
     border: 1px solid #ecf1f8;
@@ -585,7 +594,7 @@ main#home-page {
 .user-account .user-account-content .inner .account-information h3 {
     font-size: 17px;
     margin-bottom: 10px;
-    color: #2aaf27;
+    color: #75aeeb;
 }
 .user-account .user-account-content .inner .account-information ul li {
     display: block;
@@ -689,7 +698,7 @@ main#home-page {
     line-height: 48px;
     text-align: center;
     display: block;
-    background-color: #2aaf27;
+    background-color: #75aeeb;
     color: #fff;
     font-size: 17px;
     margin-top: 25px;
