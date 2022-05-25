@@ -13,11 +13,11 @@ const MainLayout = (props) => {
             <Helmet>
                 <title>شاپل</title>
             </Helmet>
-            <div className="landing-layer">
+            <div>
                 <LoadingBar
                     style={{ backgroundColor: "lime", height: "5px" }}
                 />
-                <div className="container">
+                <div>
                     <TopNav />
                     {pathname === "/" ? <Header /> : null}
                 </div>
