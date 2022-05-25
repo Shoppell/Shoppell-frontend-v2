@@ -1,6 +1,6 @@
 import {getAllProduct} from "../services/getProducts"
 
-export const getProducts = (slug) => {
+export const getProductsAndShop = (slug) => {
     return async (dispatch) => {
         const { data } = await getAllProduct(slug);
         // const data = [
@@ -54,6 +54,6 @@ export const getProducts = (slug) => {
         //     }
         // ];
         console.log(data);
-        await dispatch({ type: "GET_PRODUCTS_LIST", payload: data });
+        await dispatch({ type: "GET_SHOP", payload: data });
     };
 };

@@ -2,14 +2,30 @@ import {
     getCourses,
     newCourse,
     updateCourse,
-    deleteCourse,
+    deleteCourse, getAllShop,
 } from "./../services/courseService";
 import { successMessage } from "./../utils/message";
+import {getProductList} from "../services/getProducts";
 
 export const getAllCourses = () => {
     return async (dispatch) => {
         const { data } = await getCourses();
+        await dispatch({ type: "GET_PRODUCT_LIST", payload: data });
+    };
+};
 
+export const getAllProductList = (slug) => {
+    return async (dispatch) => {
+        const { data } = await getProductList(slug);
+        console.log(data)
+        await dispatch({ type: "GET_PRODUCTS_LIST_DATA", payload: data });
+    };
+};
+
+
+export const getAllShops = () => {
+    return async (dispatch) => {
+        const { data } = await getAllShop();
         console.log(data);
         await dispatch({ type: "GET_SHOP_LIST", payload: data });
     };

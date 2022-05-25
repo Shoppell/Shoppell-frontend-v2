@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ShowImage from "../common/ShowImage";
 
 const Course = ({ courses }) => {
+    console.log(courses)
     return (
         <div>
         <section className="terms-items">

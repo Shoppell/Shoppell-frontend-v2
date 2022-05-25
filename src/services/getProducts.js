@@ -1,9 +1,12 @@
 import http from "./httpService";
+import config from "./config.json";
 
-export const getAllProduct = (idProduct) => {
-    return http.get(`http://127.0.0.1:5000/api/v1/shop/pr/list/`).then(res => res.data.data);
+
+export const getAllProduct = (slug) => {
+    return http.get(`${config.localapi}/api/v1/shop/shop/read/${slug}`);
 };
 
-export const getProduct = () => {
-  return http.get(`http://127.0.0.1:5000/api/v1/shop/shop`).then(res => res.data.data);
+export const getProductList = (slug) => {
+    return http.get(`${config.localapi}/api/v1/shop/shop/productlist/${slug}`);
 };
+

@@ -120,8 +120,8 @@ const Toplearn = () => {
                             }
                         />
                         <Route path="/archive" component={Archive} />
-                        <Route path="/course/:id" component={SingleCourse} />
-                        <Route path="/course/:id/:id" component={productD}/>
+                        <Route path="/course/:slug" component={SingleCourse} />
+                        <Route path="/course/:slug/:id" component={productD}/>
                         <Route path="/shop1" component={ProductS} />
                         <Route path="/about" component={About_us} />
                         <Route path="/user-profile" component={UserProfile} />

@@ -22,6 +22,7 @@ const TopNav = () => {
                             </NavLink>
                             <Link to="/about"> درباره ما </Link>
                             <a href=""> تماس با ما </a>
+                            <Link to="/archive">آرشیو فروشگاه ها</Link>
                         </li>
                     </ul>
                 </div>

@@ -6,8 +6,7 @@ const ShowImage = ({ image }) => {
     return (
         <Img
             src={[
-                `https://toplearnapi.ghorbany.dev/${image}`,
-                "https://via.placeholder.com/150x100"
+                `http://192.168.100.6:5000${image}`,
             ]}
             loader={
                 <div className="text-center mx-auto">

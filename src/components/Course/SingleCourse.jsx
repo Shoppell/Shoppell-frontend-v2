@@ -1,19 +1,31 @@
-import React, { Fragment, useEffect } from "react";
+import React, {Fragment, useEffect, useState} from "react";
 import Pagination from "../common/Pagination";
 import { useSelector, useDispatch } from "react-redux";
-import { getSingleCourse } from "./../../actions/course";
 import ShowImage from "./../common/ShowImage";
-import {getProducts} from "../../actions/products";
+import {getProductsAndShop} from "../../actions/products";
+import {store} from "../../store";
+import ProductS from "../shops/products"
+import {paginate} from "../../utils/paginate";
 
 const SingleCourse = ({ match }) => {
-    const course = useSelector(state => state.course);
-    const dispatch = useDispatch();
-    const products = getProducts(course.slug);
 
     useEffect(() => {
         // if (courseIdValidator(match.params.id))
-            dispatch(getSingleCourse(match.params.id));
-    }, []);
+        store.dispatch(getProductsAndShop(match.params.slug));
+    },[]);
+
+    const shop = useSelector(state => state.product);
+    console.log(shop.name);
+    const [perPage] = useState(20);
+    const [currentPage, setCurrentPage] = useState(1);
+    const slug = match.params.slug;
+    console.log(slug);
+    const handlePageChange = page => {
+        setCurrentPage(page);
+    };
+
+    // const archiveProducts = paginate(product, currentPage, perPage);
+    // console.log(archiveProducts)
 
     // if (!courseIdValidator(match.params.id)) return <Redirect to="/404" />;
 
@@ -22,34 +34,34 @@ const SingleCourse = ({ match }) => {
         <Fragment>
             <section className="term-content">
                 <header>
-                    <h1>{course.title}</h1>
+                    <h1>خانه/{shop.name}</h1>
                 </header>
                 <div className="row">
                     <aside className="col-md-4 col-sm-12 col-xs-12 pull-right">
-                        <div className="statistics">
-                            <ul>
-                                <li>
-                                    <span> مدت دوره </span>
-                                    <i> 03:12:52 </i>
-                                </li>
-                                <li>
-                                    <span> تعداد ویدیوها </span>
-                                    <i> 16 </i>
-                                </li>
-                                <li>
-                                    <span> تعداد دانشجوها </span>
-                                    <i> 52 نفر </i>
-                                </li>
-                            </ul>
+                        {/*<div className="statistics">*/}
+                        {/*    <ul>*/}
+                        {/*        <li>*/}
+                        {/*            <span> مدت دوره </span>*/}
+                        {/*            <i> 03:12:52 </i>*/}
+                        {/*        </li>*/}
+                        {/*        <li>*/}
+                        {/*            <span> تعداد ویدیوها </span>*/}
+                        {/*            <i> 16 </i>*/}
+                        {/*        </li>*/}
+                        {/*        <li>*/}
+                        {/*            <span> تعداد دانشجوها </span>*/}
+                        {/*            <i> 52 نفر </i>*/}
+                        {/*        </li>*/}
+                        {/*    </ul>*/}
 
-                            <a href=""> شرکت در دوره : 450.000 تومان </a>
-                        </div>
+                        {/*    <a href=""> شرکت در دوره : 450.000 تومان </a>*/}
+                        {/*</div>*/}
 
                         <article className="teacher-info">
-                            <img src="../images/pic/avatar.jpg" />
-                            <h2> اسم فروشگاه انیجا </h2>
+                            <ShowImage image={shop.image} />
+                            <h2> {shop.name} </h2>
                             <p>
-                                اطلاعات فروشگاه میاد اینجا
+                                {shop.description}
                             </p>
                         </article>
 
@@ -76,12 +88,17 @@ const SingleCourse = ({ match }) => {
                     </aside>
                     <div className="col-md-8 col-sm-12 col-xs-12 pull-left">
                         <section className="term-description">
-                            <ShowImage image={course.image} />
-
-                            <p>{course.info}</p>
-
+                            <ShowImage image= {shop.cover} />
                         </section>
-                        {/*<ProductS courses={}/>*/}
+                        <div className="row">
+                        <ProductS slug={slug}/>
+                        </div>
+                        {/*<Pagination*/}
+                        {/*    totalCourse={product.length}*/}
+                        {/*    currentPage={currentPage}*/}
+                        {/*    perPage={perPage}*/}
+                        {/*    onPageChange={handlePageChange}*/}
+                        {/*/>*/}
                         <section className="user-comments">
                             <header>
                                 <h3> نظرات کاربران </h3>

@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import Pagination from "../common/Pagination";
 import {useSelector} from "react-redux";
 import { paginate } from "./../../utils/paginate";
 import Course from "./Course";
+import {store} from "../../store";
+import {getAllShops} from "../../actions/courses";
 
 const Archive = () => {
+
+    useEffect(() => {
+        store.dispatch(getAllShops());
+    }, []);
     const [perPage] = useState(20);
     const [currentPage, setCurrentPage] = useState(1);
     const courses = useSelector(state => state.courses);
@@ -22,9 +28,9 @@ const Archive = () => {
                 <header>
                     <h1>
                         {" "}
-                        دوره های <span> برنامه نویسی وب </span>{" "}
+                        جستجو <span> فروشگاه </span>{" "}
                     </h1>{" "}
-                    <span> دوره </span>
+                    <span> فروشگاها </span>
                 </header>
 
                 <div className="row">
@@ -42,7 +48,7 @@ const Archive = () => {
                             </div>
                         </form>
                     </div>
-                    <div className="col-md-4 col-sm-6 col-xs-12 pull-right">
+                    <div className="col-md-4 col-sm-6 col-xs-8 pull-right">
                         <div className="switch-field available">
                             <input
                                 id="available-filter-1"
@@ -65,7 +71,6 @@ const Archive = () => {
                                 value="normal"
                                 type="radio"
                             />
-                            <label for="available-filter-3"> رایگان </label>
                         </div>
                     </div>
                     <div className="col-md-4 col-sm-6 col-xs-12 pull-left">
@@ -73,7 +78,6 @@ const Archive = () => {
                             <select>
                                 <option> مرتب سازی </option>
                                 <option> قیمت </option>
-                                <option> مدرت زمان دوره </option>
                                 <option> تاریخ انتشار </option>
                             </select>
                         </div>
@@ -91,51 +95,25 @@ const Archive = () => {
                             <ul>
                                 <li>
                                     <input type="checkbox" name="" id="cat-1" />
-                                    <label for="cat-1"> برنامه نویسی وب </label>
+                                    <label for="cat-1"> پوشاک </label>
                                 </li>
                                 <li>
                                     <input type="checkbox" name="" id="cat-2" />
                                     <label for="cat-2">
                                         {" "}
-                                        برنامه نویسی موبایل{" "}
+                                        موبایل و لوازم موبایل{" "}
                                     </label>
                                 </li>
                                 <li>
                                     <input type="checkbox" name="" id="cat-3" />
-                                    <label for="cat-3"> برنامه نویسی وب </label>
+                                    <label for="cat-3">لوازم صوتی و الکترونیک</label>
                                 </li>
                                 <li>
                                     <input type="checkbox" name="" id="cat-4" />
                                     <label for="cat-4">
                                         {" "}
-                                        برنامه نویسی موبایل{" "}
+                                        مبلمان{" "}
                                     </label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" name="" id="cat-5" />
-                                    <label for="cat-5"> برنامه نویسی وب </label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" name="" id="cat-6" />
-                                    <label for="cat-6">
-                                        {" "}
-                                        برنامه نویسی موبایل{" "}
-                                    </label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" name="" id="cat-7" />
-                                    <label for="cat-7"> برنامه نویسی وب </label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" name="" id="cat-8" />
-                                    <label for="cat-8">
-                                        {" "}
-                                        برنامه نویسی موبایل{" "}
-                                    </label>
-                                </li>
-                                <li>
-                                    <input type="checkbox" name="" id="cat-9" />
-                                    <label for="cat-9"> برنامه نویسی وب </label>
                                 </li>
                                 <li>
                                     <input
@@ -145,7 +123,7 @@ const Archive = () => {
                                     />
                                     <label for="cat-10">
                                         {" "}
-                                        برنامه نویسی موبایل{" "}
+                                        لوازم آشپزخانه{" "}
                                     </label>
                                 </li>
                             </ul>
