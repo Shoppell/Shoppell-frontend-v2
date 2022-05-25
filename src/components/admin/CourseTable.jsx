@@ -1,14 +1,14 @@
 import React, {useContext, useEffect} from "react";
 import Pagination from "./../common/Pagination";
 import { dashContext } from "./../context/dashContext";
-import { getAllCourses } from "./../../actions/courses";
+import {getAdminListProduct} from "./../../actions/courses";
 import {store} from "../../store";
 
 const CourseTable = () => {
     const context = useContext(dashContext);
 
     useEffect(() => {
-        store.dispatch(getAllCourses())
+        store.dispatch(getAdminListProduct())
     }, []);
 
     const {
@@ -25,8 +25,7 @@ const CourseTable = () => {
         sortCoursesDes,
     } = context;
 
-
-
+    console.log(filteredCourses)
 
     return (
         <section style={{ marginTop: "7em", marginRight: "2em" }}>

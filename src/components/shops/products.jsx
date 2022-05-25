@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import ShowImage from "../common/ShowImage";
-import {getProductList} from "../../services/getProducts";
 import {store} from "../../store";
-import {getProductsAndShop} from "../../actions/products";
-import {getAllProductList} from "../../actions/courses";
 import {useSelector} from "react-redux";
+import {getAllProductList} from "../../actions/productList";
 
 const ProductS = ({slug}) => {
     useEffect(() => {

@@ -1,21 +1,18 @@
 import React, {useEffect, useState} from "react";
-import {ProductDetailsAction} from "../../actions/productDetails";
 import {useSelector} from "react-redux";
-import {productDetailsReducer} from "../../reducers/productDetails";
 import {store} from "../../store";
-import { courseReducer } from "../../reducers/course";
-
+import {ProductDetailsAction} from "../../actions/getProductDetails";
 
 const ProductD = ({match}) => {
     useEffect(() => {
         store.dispatch(ProductDetailsAction(match.params.id));
     },[]);
 
-    const product = useSelector(state => state.productDetail);
+    const product = useSelector(state => state.shopDetails);
     console.log(product)
-    
+
     return(
-        
+
         <div className="product-card">
         <div className="badge">{product.off}%</div>
         <div className="product-tumb">
@@ -35,7 +32,7 @@ const ProductD = ({match}) => {
           </div>
         </div>
       </div>
-        
+
 
 
         // <div className="container">

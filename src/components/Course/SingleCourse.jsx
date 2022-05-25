@@ -6,15 +6,16 @@ import {getProductsAndShop} from "../../actions/products";
 import {store} from "../../store";
 import ProductS from "../shops/products"
 import {paginate} from "../../utils/paginate";
+import {ShopDetailsAction} from "../../actions/getShopDetails";
 
 const SingleCourse = ({ match }) => {
 
     useEffect(() => {
         // if (courseIdValidator(match.params.id))
-        store.dispatch(getProductsAndShop(match.params.slug));
+        store.dispatch(ShopDetailsAction(match.params.slug));
     },[]);
 
-    const shop = useSelector(state => state.product);
+    const shop = useSelector(state => state.shopDetails);
     console.log(shop.name);
     const [perPage] = useState(20);
     const [currentPage, setCurrentPage] = useState(1);
@@ -91,7 +92,7 @@ const SingleCourse = ({ match }) => {
                         </div>
 
                     </aside>
-      
+
                     <div className="col-md-8 col-sm-12 col-xs-12 pull-left">
                         <section className="term-description">
                             <ShowImage image={shop.cover} />
@@ -99,11 +100,11 @@ const SingleCourse = ({ match }) => {
                         <div className="row">
                             <ProductS slug={slug}/>
                         </div>
-            
-                     
+
+
                     </div>
 
-                  
+
 
                 </div>
             </section>
@@ -257,7 +258,7 @@ const SingleCourse = ({ match }) => {
                                 </div>
                             </div>
                         </section>
-                        
+
         </Fragment>
 
     );

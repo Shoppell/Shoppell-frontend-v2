@@ -4,7 +4,7 @@ import {useSelector} from "react-redux";
 import { paginate } from "./../../utils/paginate";
 import Course from "./Course";
 import {store} from "../../store";
-import {getAllShops} from "../../actions/courses";
+import {getAllShops} from "../../actions/getShopList";
 
 const Archive = () => {
 
@@ -13,7 +13,7 @@ const Archive = () => {
     }, []);
     const [perPage] = useState(20);
     const [currentPage, setCurrentPage] = useState(1);
-    const courses = useSelector(state => state.courses);
+    const courses = useSelector(state => state.shopList);
     console.log(courses);
 
     const handlePageChange = page => {

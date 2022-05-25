@@ -5,29 +5,13 @@ import {
     deleteCourse, getAllShop,
 } from "./../services/courseService";
 import { successMessage } from "./../utils/message";
-import {getProductList} from "../services/getProducts";
 
-export const getAllCourses = () => {
+
+export const getAdminListProduct = () => {
     return async (dispatch) => {
         const { data } = await getCourses();
-        await dispatch({ type: "GET_PRODUCT_LIST", payload: data });
-    };
-};
-
-export const getAllProductList = (slug) => {
-    return async (dispatch) => {
-        const { data } = await getProductList(slug);
         console.log(data)
-        await dispatch({ type: "GET_PRODUCTS_LIST_DATA", payload: data });
-    };
-};
-
-
-export const getAllShops = () => {
-    return async (dispatch) => {
-        const { data } = await getAllShop();
-        console.log(data);
-        await dispatch({ type: "GET_SHOP_LIST", payload: data });
+        await dispatch({ type: "INIT", payload: data.shopAdmin});
     };
 };
 
@@ -38,7 +22,7 @@ export const createNewCourse = (course) => {
             if (status === 201) successMessage("محصول با موفقیت اضافه شد!");
             await dispatch({
                 type: "ADD_COURSE",
-                payload: [...getState().courses],
+                payload: [...getState().shopAdmin],
             });
         }
         catch (ex) {
@@ -50,19 +34,10 @@ export const createNewCourse = (course) => {
 
 export const handleCourseUpdate = (courseId, updatedCourse) => {
     return async (dispatch, getState) => {
-        const courses = [...getState().courses];
+        const courses = [...getState().shopAdmin];
         const filteredCourses = courses.filter(
             (course) => course._id !== courseId
         );
-        // const updatedCourses = [...courses];
-        // const courseIndex = updatedCourses.findIndex(
-        //     (course) => course._id == courseId
-        // );
-
-        // let course = updatedCourses[courseIndex];
-
-        // course = { ...Object.fromEntries(updatedCourse) };
-        // updatedCourses[courseIndex] = course;
 
         try {
             const { data, status } = await updateCourse(
@@ -72,7 +47,7 @@ export const handleCourseUpdate = (courseId, updatedCourse) => {
             console.log(data);
             await dispatch({
                 type: "UPDATE_COURSE",
-                payload: [...filteredCourses, data.course],
+                payload: [...filteredCourses, data.shopAdmin],
             });
             if (status === 200) {
                 successMessage("دوره با موفقیت ویرایش شد.");
@@ -85,9 +60,9 @@ export const handleCourseUpdate = (courseId, updatedCourse) => {
 
 export const handleCourseDelete = (courseId) => {
     return async (dispatch, getState) => {
-        const courses = [...getState().courses];
+        const courses = [...getState().shopAdmin];
         const filteredCourses = courses.filter(
-            (course) => course._id !== courseId
+            (course) => course.id !== courseId
         );
 
         try {

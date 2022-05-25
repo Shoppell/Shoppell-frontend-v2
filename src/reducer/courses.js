@@ -1,8 +1,6 @@
-export const coursesReducer = (state = [], action) => {
+export const ShopAdminReducer = (state = [], action) => {
     switch (action.type) {
-        case "GET_ALL_PRODUCT":
-            return [...action.payload];
-        case "GET_SHOP_LIST":
+        case "INIT":
             return [...action.payload];
         case "ADD_COURSE":
             return [...action.payload];

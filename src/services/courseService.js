@@ -12,7 +12,7 @@ export const getAllShop = () => {
     return http.get(`${config.localapi}/api/v1/shop/shop/list`);
 };
 
-export const getCourse = (courseId) => {
+export const getShopDetails = (courseId) => {
     return http.get(`${config.localapi}/api/v1/shop/shop/read/${courseId}`);
 };
 export const newCourse = (course) => {
