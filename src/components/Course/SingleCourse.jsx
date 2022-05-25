@@ -38,28 +38,33 @@ const SingleCourse = ({ match }) => {
                 </header>
                 <div className="row">
                     <aside className="col-md-4 col-sm-12 col-xs-12 pull-right">
-                        {/*<div className="statistics">*/}
-                        {/*    <ul>*/}
-                        {/*        <li>*/}
-                        {/*            <span> مدت دوره </span>*/}
-                        {/*            <i> 03:12:52 </i>*/}
-                        {/*        </li>*/}
-                        {/*        <li>*/}
-                        {/*            <span> تعداد ویدیوها </span>*/}
-                        {/*            <i> 16 </i>*/}
-                        {/*        </li>*/}
-                        {/*        <li>*/}
-                        {/*            <span> تعداد دانشجوها </span>*/}
-                        {/*            <i> 52 نفر </i>*/}
-                        {/*        </li>*/}
-                        {/*    </ul>*/}
+                         <div className="statistics">
+                         <ul>
+                               <li>
+                                   <span> امنیت </span>
+                                   <i class="fa fa-check-square-o" aria-hidden="true"></i>
 
-                        {/*    <a href=""> شرکت در دوره : 450.000 تومان </a>*/}
-                        {/*</div>*/}
+                               </li>
+                               <li>
+                                   <span> تعداد محصولات </span>
+                                   <i> 16 </i>
+                               </li>
+                               <li>
+                                   <span> امتیاز کاربران</span>
+                                   <i> 4.5 </i>
+                               </li>
+                            </ul>
+
+                           <a href="">
+                                چت با فروشنده
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                </a>
+                        </div>
 
                         <article className="teacher-info">
                             <ShowImage image={shop.image} />
                             <h2> {shop.name} </h2>
+                            <hr></hr>
                             <p>
                                 {shop.description}
                             </p>
@@ -83,23 +88,27 @@ const SingleCourse = ({ match }) => {
 
                         <div className="tags-layer">
                             <a href=""> تگ ها  </a>
-
                         </div>
+
                     </aside>
+      
                     <div className="col-md-8 col-sm-12 col-xs-12 pull-left">
                         <section className="term-description">
-                            <ShowImage image= {shop.cover} />
+                            <ShowImage image={shop.cover} />
                         </section>
                         <div className="row">
-                        <ProductS slug={slug}/>
+                            <ProductS slug={slug}/>
                         </div>
-                        {/*<Pagination*/}
-                        {/*    totalCourse={product.length}*/}
-                        {/*    currentPage={currentPage}*/}
-                        {/*    perPage={perPage}*/}
-                        {/*    onPageChange={handlePageChange}*/}
-                        {/*/>*/}
-                        <section className="user-comments">
+            
+                     
+                    </div>
+
+                  
+
+                </div>
+            </section>
+
+            <section className="user-comments">
                             <header>
                                 <h3> نظرات کاربران </h3>
                             </header>
@@ -248,12 +257,9 @@ const SingleCourse = ({ match }) => {
                                 </div>
                             </div>
                         </section>
-                    </div>
-
-
-                </div>
-            </section>
+                        
         </Fragment>
+
     );
 };
 

@@ -3,16 +3,41 @@ import {ProductDetailsAction} from "../../actions/productDetails";
 import {useSelector} from "react-redux";
 import {productDetailsReducer} from "../../reducers/productDetails";
 import {store} from "../../store";
+import { courseReducer } from "../../reducers/course";
 
 
 const ProductD = ({match}) => {
     useEffect(() => {
         store.dispatch(ProductDetailsAction(match.params.id));
     },[]);
+
     const product = useSelector(state => state.productDetail);
     console.log(product)
+    
     return(
-        <div>{product.name}</div>
+        
+        <div className="product-card">
+        <div className="badge">{product.off}%</div>
+        <div className="product-tumb">
+          <img style={{borderRadius:"3%"}} src={product.image1} />
+        </div>
+        <div className="product-details">
+          {/* <span className="product-catagory">{product.category}</span> */}
+          <h4><a href>{product.name}</a></h4>
+          <p>{product.description}</p>
+          <div className="product-bottom-details">
+            <div className="product-price" style={{color:"black", textAlign:"left"}}><del>{product.price}</del>|
+            {product.last_price} تومان</div>
+            <div className="product-links">
+              <a href><i className="fa fa-heart" /></a>
+              <a href><i className="fa fa-shopping-cart" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+
+
         // <div className="container">
         //     <div className="card">
         //         <div className="container-fliud">

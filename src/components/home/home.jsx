@@ -200,7 +200,7 @@ const Home = () => {
                  <div className="col-md-5 no-padding lib-item" data-category="view">
                       <div className="lib-panel"> <div className="row box-shadow">
                            <div className="col-md-6">
-                                <img className="lib-img-show" src="https://i.imgur.com/K7A78We.jpg" />
+                                <img className="lib-img-show" src="https://dkstatics-public.digikala.com/digikala-adservice-banners/10e8c8002025a01bf78e8baf7727503da7c64726_1653111680.jpg?x-oss-process=image/quality,q_95" />
                             </div>
                             <div className="col-md-6">
                                 <div className="lib-row lib-header">
@@ -214,7 +214,7 @@ const Home = () => {
                 <div className="col-md-5 no-padding lib-item" data-category="ui"> 
                     <div className="lib-panel"> <div className="row box-shadow">
                             <div className="col-md-6">
-                                <img className="lib-img-show" src="https://i.imgur.com/K7A78We.jpg" />
+                                <img className="lib-img-show" src="https://dkstatics-public.digikala.com/digikala-adservice-banners/10e8c8002025a01bf78e8baf7727503da7c64726_1653111680.jpg?x-oss-process=image/quality,q_95" />
                                    </div>
                                 <div className="col-md-6">
                             <div className="lib-row lib-header"> Nature
@@ -224,7 +224,7 @@ const Home = () => {
                        <div className="col-md-5 no-padding lib-item" data-category="view">
                       <div className="lib-panel"> <div className="row box-shadow">
                            <div className="col-md-6">
-                                <img className="lib-img-show" src="https://i.imgur.com/K7A78We.jpg" />
+                                <img className="lib-img-show" src="https://dkstatics-public.digikala.com/digikala-adservice-banners/10e8c8002025a01bf78e8baf7727503da7c64726_1653111680.jpg?x-oss-process=image/quality,q_95" />
                             </div>
                             <div className="col-md-6">
                                 <div className="lib-row lib-header">
@@ -238,7 +238,7 @@ const Home = () => {
                 <div className="col-md-5 no-padding lib-item" data-category="ui"> 
                     <div className="lib-panel"> <div className="row box-shadow">
                             <div className="col-md-6">
-                                <img className="lib-img-show" src="https://i.imgur.com/K7A78We.jpg" />
+                                <img className="lib-img-show" src="https://dkstatics-public.digikala.com/digikala-adservice-banners/10e8c8002025a01bf78e8baf7727503da7c64726_1653111680.jpg?x-oss-process=image/quality,q_95" />
                                    </div>
                                 <div className="col-md-6">
                             <div className="lib-row lib-header"> Nature

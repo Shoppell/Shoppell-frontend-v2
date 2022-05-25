@@ -23,10 +23,11 @@ const ProductS = ({slug}) => {
 
     return(
         <div>
-            <section className="terms-items">
+            <section className="terms-items" style={{margin:"1%"}}>
 
                 <header>
                     <h2>محصولات</h2>
+                    <hr></hr>
                 </header>
                 <div className="row">
                     {array.map(course => (
@@ -42,7 +43,15 @@ const ProductS = ({slug}) => {
                                 >
                                     <ShowImage image={course.image1} />
                                 </Link>
-
+                                <h3>
+                                    {course.name}
+                                </h3>
+                                <del style={{color:"grey"}}>
+                                    {course.price}
+                                </del>
+                                <h4>
+                                    {course.last_price}
+                                </h4>
                             </article>
                         </div>
                     ))}

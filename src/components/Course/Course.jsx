@@ -7,9 +7,9 @@ const Course = ({ courses }) => {
     return (
         <div>
         <section className="terms-items">
-
             <header>
-                <h2>محصولات</h2>
+                <h2>فروشگاه ها</h2>
+                <hr></hr>
             </header>
             <div className="row">
                 {courses.map(course => (
@@ -23,7 +23,7 @@ const Course = ({ courses }) => {
                                 to={`/course/${course.slug}`}
                                 className="img-layer"
                             >
-                                <ShowImage image={course.image} />
+                                <ShowImage image={course.image}/>
                             </Link>
 
                         </article>

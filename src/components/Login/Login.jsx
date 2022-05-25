@@ -12,15 +12,13 @@ const Login = () => {
     } = loginContext;
 
 
-
-
-
     return (
         <main className="client-page">
             <div className="container-content">
                 <header>
                     <h2> ورود به سایت </h2>
                 </header>
+                <hr></hr>
 
 
                 <div className="form-layer">

@@ -38,6 +38,9 @@ const Register = () => {
                 <header>
                     <h2> ساخت فروشگاه </h2>
                 </header>
+                
+                <hr></hr>
+
                 <Helmet>
                     <title> شاپل ساخت فروشگاه</title>
                 </Helmet>

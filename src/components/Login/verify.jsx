@@ -12,16 +12,13 @@ const Verify = () => {
     } = loginContext;
 
 
-
-
-
     return (
         <main className="client-page">
             <div className="container-content">
                 <header>
                     <h2> کد تایید </h2>
                 </header>
-
+                <hr></hr>
 
                 <div className="form-layer">
                     <form onSubmit={(e) => handleVerify(e)}>
