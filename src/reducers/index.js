@@ -5,6 +5,7 @@ import {productReducer} from "./products"
 import { userReducer } from "./user";
 import { loadingBarReducer } from "react-redux-loading-bar";
 import {productListReducer} from "./productList";
+import {productDetailsReducer} from "./productDetails";
 
 export const reducers = combineReducers({
     courses: coursesReducer,
@@ -12,5 +13,6 @@ export const reducers = combineReducers({
     product : productReducer,
     user: userReducer,
     productList: productListReducer,
+    productDetail : productDetailsReducer,
     loadingBar: loadingBarReducer
 });

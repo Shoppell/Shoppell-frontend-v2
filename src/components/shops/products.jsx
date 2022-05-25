@@ -37,7 +37,7 @@ const ProductS = ({slug}) => {
                         >
                             <article>
                                 <Link
-                                    to={`/course/${course.slug}`}
+                                    to={`/product/${slug}/${course.id}`}
                                     className="img-layer"
                                 >
                                     <ShowImage image={course.image1} />
