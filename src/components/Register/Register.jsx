@@ -37,7 +37,7 @@ const Register = () => {
             <div className="container-content">
                 <header>
                     <h2> ساخت فروشگاه </h2>
-                    <hr></hr>
+                
                 </header>
                 
                 <hr></hr>
@@ -70,8 +70,9 @@ const Register = () => {
                                 <i className="zmdi zmdi-lock"></i>
                             </span>
                             <input
-                                type="password"
+                                type="text"
                                 name="password"
+                                style={{fontFamily:"Roboto" }}
                                 className="form-control"
                                 placeholder="نام کاربری فروشگاه"
                                 aria-describedby="password"
@@ -129,11 +130,12 @@ const Register = () => {
                                 سایت{" "}
                             </a>
                         </div>
-
-                        <button className="btn btn-success">
-                            {" "}
-                            عضویت در سایت{" "}
-                        </button>
+                        <div className="text-center">
+                            <button className="btn btn-success">
+                                {" "}
+                               ساخت فروشگاه{" "}
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>

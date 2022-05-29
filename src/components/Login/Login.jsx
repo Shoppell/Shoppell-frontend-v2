@@ -17,7 +17,7 @@ const Login = () => {
             <div className="container-content">
                 <header>
                     <h2> ورود به سایت </h2>
-                    <hr></hr>
+               
                 </header>
                 <hr></hr>
 
@@ -54,7 +54,7 @@ const Login = () => {
 
 
                         <div className={"text-center"}>
-                        <button className="btn btn-primary">
+                        <button className="btn btn-success">
                             {" "}
                             ورود به سایت{" "}
                         </button>

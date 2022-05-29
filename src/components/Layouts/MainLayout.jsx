@@ -15,7 +15,7 @@ const MainLayout = (props) => {
             </Helmet>
             <div style={{backgroundColor:"#75aeeb"}}>
                 <LoadingBar
-                    style={{ backgroundColor: "lime", height: "5px" }}
+                    style={{ backgroundColor: "lime", height: "5px", zIndex:"99" }}
                 />
                 <div className="container" >
 
