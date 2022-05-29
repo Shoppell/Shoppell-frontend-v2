@@ -109,7 +109,7 @@ const SingleCourse = ({ match }) => {
                 </div>
             </section>
 
-            <section className="user-comments">
+            {/* <section className="user-comments">
                             <header>
                                 <h3> نظرات کاربران </h3>
                             </header>
@@ -257,7 +257,7 @@ const SingleCourse = ({ match }) => {
                                     <Pagination />
                                 </div>
                             </div>
-                        </section>
+            </section> */}
 
         </Fragment>
 

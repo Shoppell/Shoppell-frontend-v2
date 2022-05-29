@@ -17,7 +17,7 @@ const PrivateLayout = ({ children }) => {
                 role="navigation"
             >
                 <div className="navbar-header">
-                    <Link className="navbar-brand" to="/dashboard">
+                    <Link className="navbar-brand" to="/dashboard" style={{fontFamily:"Vazir"}}>
                         داشبورد شاپل
                     </Link>
                 </div>

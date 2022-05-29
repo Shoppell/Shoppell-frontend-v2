@@ -25,6 +25,7 @@ const Course = ({ courses }) => {
                     >
                         <article>
                             <Link
+                                style={{width:"100%"}}
                                 to={`/course/${course.slug}`}
                                 className="img-layer"
                             >

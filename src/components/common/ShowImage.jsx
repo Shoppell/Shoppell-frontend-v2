@@ -9,6 +9,7 @@ const ShowImage = ({ image }) => {
             src={[
                 config.localapi+image,
             ]}
+            style={{borderRadius:"15px"}}
             loader={
                 <div className="text-center mx-auto">
                     <ScaleLoader loading={true} color={"#4A90E2"} />
