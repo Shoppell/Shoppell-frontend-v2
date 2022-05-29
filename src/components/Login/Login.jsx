@@ -17,9 +17,9 @@ const Login = () => {
             <div className="container-content">
                 <header>
                     <h2> ورود به سایت </h2>
+                    <hr></hr>
                 </header>
                 <hr></hr>
-
 
                 <div className="form-layer">
                     <form onSubmit={(e) => handleLogin(e)}>

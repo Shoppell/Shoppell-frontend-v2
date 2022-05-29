@@ -13,11 +13,12 @@ const MainLayout = (props) => {
             <Helmet>
                 <title>شاپل</title>
             </Helmet>
-            <div>
+            <div style={{backgroundColor:"#75aeeb"}}>
                 <LoadingBar
                     style={{ backgroundColor: "lime", height: "5px" }}
                 />
-                <div>
+                <div className="container" >
+
                     <TopNav />
                     {pathname === "/" ? <Header /> : null}
                 </div>

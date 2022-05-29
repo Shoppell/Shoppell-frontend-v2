@@ -37,6 +37,7 @@ const Register = () => {
             <div className="container-content">
                 <header>
                     <h2> ساخت فروشگاه </h2>
+                    <hr></hr>
                 </header>
                 
                 <hr></hr>
@@ -72,7 +73,7 @@ const Register = () => {
                                 type="password"
                                 name="password"
                                 className="form-control"
-                                placeholder="یوزر فروشگاه"
+                                placeholder="نام کاربری فروشگاه"
                                 aria-describedby="password"
                                 value={slug}
                                 onChange={(e) => {
@@ -87,9 +88,11 @@ const Register = () => {
                                 <i className="zmdi zmdi-lock"></i>
                             </span>
                             <input
+                            
                                 type="file"
                                 name="imageUrl"
-                                style={{ marginBottom: 3 }}
+                                placeholder="نام کاربری فروشگاه"
+                                style={{ marginBottom: 3, fontFamily:"Roboto" }}
                                 className="form-control mb-2"
                                 aria-describedby="imageUrl"
                                 onChange={(e) => {

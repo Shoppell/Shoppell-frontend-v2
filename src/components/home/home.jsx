@@ -13,8 +13,8 @@ const Home = () => {
                                 <span style={{fontSize: '96px', fontFamily: "Nahid",fontWeight:"800"}}>شاپل</span>
                             </h3>
                             <hr style={{width:500}}></hr>
-                            <h3 >فروشگاه خودتو همین الان بساز</h3>
-                            <p className="u-align-right u-text u-text-3">&nbsp;شما در هر لحظه فروشگاه خودت رو بسازی.بدون نیاز به هزینه ای</p>
+                            <h3 >لینک فروشگاه ایسنتاگرامت رو بساز</h3>
+                    
                             <button type="button" class="btn" style={{color:"#407BFF", float:"left"}}>ساخت فروشگاه <sapn></sapn><i class="fa fa-cog fa-1x"></i>
                         </button>
                     </div>
@@ -108,7 +108,7 @@ const Home = () => {
       <section className="page-add" style={{marginBottom: '0px'}}>
         <div className="container">
           <h3 style={{fontFamily: 'yekan', textAlign: 'center', fontSize:"25px"}}>
-            نمونه فروشگاه های ساخته شده
+            شبکه های اجتماعیت رو به هم وصل کن :)
           </h3>
           <hr style={{border: 'solid 2px #75aeeb'}} />
         </div>
@@ -123,27 +123,27 @@ const Home = () => {
             </div>
             <h2>
               Facebook</h2>
-            <p>
-              Facebook is a social networking site that easy to connect with family and friends and created in 2004. </p>
-            <a href="#">Read More</a>
+            <p style={{fontFamily:"Vazir"}}>
+              بدون نیاز به اکانت فیس بوک </p>
+       
           </div>
           <div className="content content-2">
             <div className="fa fa-instagram" style={{fontSize:"50px"}}>
             </div>
             <h2>
               Instagram</h2>
-            <p>
-              WhatsApp is a messaging app that lets users text, chat, and share media, including voice messages and video</p>
-            <a href="#">Read More</a>
+            <p style={{fontFamily:"Vazir"}}>
+              فروشگاه اینستاگرامت رو به </p>
+            <a href="#">بیشتر</a>
           </div>
           <div className="content content-3">
             <div className="fa fa-youtube-play" style={{fontSize:"50px"}}>
             </div>
             <h2>
               Youtube</h2>
-            <p>
-              YouTube is a free video sharing site that easy to watch online and create and upload your own videos.</p>
-            <a href="#">Read More</a>
+              <p style={{fontFamily:"Vazir"}}>
+              به شبکه های اجتماعی دیگه وصل کن </p>
+         
           </div>
         </div>
       </div>
@@ -157,7 +157,7 @@ const Home = () => {
                   <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                   <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                 </svg>
-                دیدن
+                شروع
               </a>
       </section>
 
@@ -183,7 +183,7 @@ const Home = () => {
       <section className="page-add" style={{marginBottom: '0px'}}>
         <div className="container">
           <h3 style={{fontFamily: 'yekan', textAlign: 'center', fontSize:"25px"}}>
-            نمونه فروشگاه های ساخته شده
+            چرا هر فروشنده لینک خودشو میخواد؟
           </h3>
           <hr style={{border: 'solid 2px #75aeeb'}} />
         </div>
