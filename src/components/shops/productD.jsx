@@ -8,7 +8,7 @@ const ProductD = ({match}) => {
         store.dispatch(ProductDetailsAction(match.params.id));
     },[]);
 
-    const product = useSelector(state => state.shopDetails);
+    const product = useSelector(state => state.productDetails);
     console.log(product)
 
     return(

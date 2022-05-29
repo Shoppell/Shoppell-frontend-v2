@@ -1,6 +1,13 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {useSelector} from "react-redux";
+import {store} from "../../store";
+import {getAdminListProduct} from "../../actions/courses";
 
-const Dashboard = ({ courses }) => {
+const Dashboard = () => {
+    useEffect(() => {
+        store.dispatch(getAdminListProduct())
+    }, []);
+    const courses = useSelector((state) => state.shopAdmin);
     return (
         <div className="container-fluid" style={{ marginTop: "7em", }}>
             <div className="row">

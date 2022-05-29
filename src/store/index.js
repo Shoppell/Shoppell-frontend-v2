@@ -1,5 +1,5 @@
 import { createStore, compose, applyMiddleware } from "redux";
-import { reducers } from "./../reducer/index";
+import { reducers } from "../reducers/index";
 import thunk from "redux-thunk";
 import { loadingBarMiddleware } from "react-redux-loading-bar";
 

@@ -17,13 +17,13 @@ const SingleCourse = ({ match }) => {
 
     const shop = useSelector(state => state.shopDetails);
     console.log(shop.name);
-    const [perPage] = useState(20);
-    const [currentPage, setCurrentPage] = useState(1);
+    // const [perPage] = useState(20);
+    // const [currentPage, setCurrentPage] = useState(1);
     const slug = match.params.slug;
     console.log(slug);
-    const handlePageChange = page => {
-        setCurrentPage(page);
-    };
+    // const handlePageChange = page => {
+    //     setCurrentPage(page);
+    // };
 
     // const archiveProducts = paginate(product, currentPage, perPage);
     // console.log(archiveProducts)

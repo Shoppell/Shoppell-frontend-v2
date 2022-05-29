@@ -3,6 +3,7 @@ import Pagination from "./../common/Pagination";
 import { dashContext } from "./../context/dashContext";
 import {getAdminListProduct} from "./../../actions/courses";
 import {store} from "../../store";
+import {useSelector} from "react-redux";
 
 const CourseTable = () => {
     const context = useContext(dashContext);
@@ -10,6 +11,8 @@ const CourseTable = () => {
     useEffect(() => {
         store.dispatch(getAdminListProduct())
     }, []);
+    const courses = useSelector((state) => state.shopAdmin);
+
 
     const {
         currentPage,

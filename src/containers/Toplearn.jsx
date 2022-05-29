@@ -23,13 +23,16 @@ import ProductS from "../components/shops/products";
 import About_us from "../components/about/about_us";
 import productD from "../components/shops/productD";
 import Home from "../components/home/home";
+import {store} from "../store";
+import {getAdminListProduct} from "../actions/courses";
 
 const Toplearn = () => {
-    const courses = useSelector((state) => state.getProduct);
+
     const user = useSelector((state) => state.user);
     const dispatch = useDispatch();
     const token = localStorage.getItem("token");
-    const indexCourses = paginate(courses, 1, 8);
+    // const indexCourses = paginate(courses, 1, 8);
+    // console.log(courses)
 
     useEffect(() => {
         if (token) {
@@ -50,7 +53,7 @@ const Toplearn = () => {
                         path="/dashboard/courses"
                         render={() =>
                             !isEmpty("سی") ? (
-                                <AdminContext courses={courses}>
+                                <AdminContext>
                                     <CourseTable />
                                 </AdminContext>
                             ) : (
@@ -63,7 +66,7 @@ const Toplearn = () => {
                         exact
                         render={() =>
                             !isEmpty("سیسی") ? (
-                                <Dashboard courses={courses} />
+                                <Dashboard/>
                             ) : (
                                 <Redirect to="/" />
                             )

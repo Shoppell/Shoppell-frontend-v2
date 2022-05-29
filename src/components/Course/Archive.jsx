@@ -20,7 +20,7 @@ const Archive = () => {
         setCurrentPage(page);
     };
 
-    const archiveCourses = paginate(courses, currentPage, perPage);
+    // const archiveCourses = paginate(courses, currentPage, perPage);
 
     return (
         <section className="term-categories">
@@ -134,7 +134,7 @@ const Archive = () => {
                 <div className="col-lg-9 col-md-8 col-sm-12 col-xs-12">
                     <section className="terms-items">
                         <div className="row" style={{margin:"1%"}}>
-                            <Course courses={archiveCourses} />
+                            <Course courses={courses} />
                         </div>
 
                         <Pagination

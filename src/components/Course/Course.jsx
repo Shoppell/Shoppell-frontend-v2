@@ -4,6 +4,11 @@ import ShowImage from "../common/ShowImage";
 
 const Course = ({ courses }) => {
     console.log(courses)
+
+    let array = [];
+    for (const key in courses){
+        array.push(courses[key])
+    }
     return (
         <div>
         <section className="terms-items">
@@ -12,7 +17,7 @@ const Course = ({ courses }) => {
                 <hr></hr>
             </header>
             <div className="row">
-                {courses.map(course => (
+                {array.map(course => (
                     <div
                         key={course.id}
                         className="col-lg-4 col-sm-4 col-sm-4 col-xs-4"
